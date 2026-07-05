@@ -55,6 +55,12 @@ class SupportedFile(MessageFilter):
             return True
 
 
+class RawMedia(MessageFilter):
+    def filter(self, message):
+        if message.photo or message.video or message.animation:
+            return True
+
+
 class Cancel(MessageFilter):
     def filter(self, message):
         if message.text and re.search(CommandRegex.CANCEL, message.text, re.I):
@@ -88,6 +94,7 @@ class CustomFilters:
     png_file = PngFile()
     webm_file = WebmFile()
     supported_file = SupportedFile()
+    raw_media = RawMedia()
     cancel = Cancel()
     done = Done()
     done_or_cancel = DoneOrCancel()
