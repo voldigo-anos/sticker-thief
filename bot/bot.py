@@ -19,6 +19,7 @@ class StickersBot(Updater):
     USERS_COMMANDS = [
         BotCommand('create', 'create a new stickers pack'),
         BotCommand('add', 'add stickers to an existing pack'),
+        BotCommand('import', 'convert a Telegram pack to WhatsApp stickers'),
         BotCommand('remove', 'remove stickers from their pack'),
         BotCommand('list', 'list your packs'),
         BotCommand('cleanup', 'remove from the database packs deleted from @stickers'),
