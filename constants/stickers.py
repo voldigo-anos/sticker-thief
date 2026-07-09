@@ -1,4 +1,33 @@
-# --- à ajouter à la fin de constants/stickers.py (ne pas remplacer le fichier, juste append) ---
+class StickerType:
+    STATIC = 10
+    ANIMATED = 20
+    VIDEO = 30
+
+
+class MimeType:
+    PNG = "image/png"
+    WEBP = "image/webp"
+    WEBM = "video/webm"
+
+
+class MaxPackSize:
+    STATIC = 120
+    ANIMATED = 50
+    VIDEO = 120
+
+
+STICKER_TYPE_DESC = {
+    StickerType.STATIC: "static",
+    StickerType.ANIMATED: "animated",
+    StickerType.VIDEO: "video"
+}
+
+MAX_PACK_SIZE = {
+    StickerType.STATIC: MaxPackSize.STATIC,
+    StickerType.ANIMATED: MaxPackSize.ANIMATED,
+    StickerType.VIDEO: MaxPackSize.VIDEO
+}
+
 
 class WaStickers:
     STICKERS_PER_FILE = 30  # WhatsApp/Sticker Maker: max 30 stickers par fichier .wastickers
@@ -9,3 +38,4 @@ class WaStickers:
     STICKER_SIZE = 512
     TITLE_MAX_LEN = 128
     AUTHOR_MAX_LEN = 128
+    
