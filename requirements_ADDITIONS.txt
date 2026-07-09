@@ -1,0 +1,6 @@
+# Aucune nouvelle dependance obligatoire (ffmpeg + pillow deja presents suffisent
+# pour les stickers statiques et video/webm).
+#
+# Optionnel: pour convertir aussi les stickers animes .tgs (Lottie) vers WhatsApp,
+# installe en plus (sinon ces stickers seront simplement ignores/"skipped"):
+lottie[GIF]
